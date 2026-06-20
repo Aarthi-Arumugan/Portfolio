@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aarthi Arumugam — ECE Engineer & Embedded Systems Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── PROFILE PHOTO ── */
+    .about-photo-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .about-photo-wrap img {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 3px solid rgba(0,212,255,0.6);
+      box-shadow: 0 0 0 6px rgba(0,212,255,0.12), 0 8px 32px rgba(0,212,255,0.18);
+      display: block;
+    }
+
+    /* ── DOWNLOAD BUTTONS ── */
+    .cert-downloads {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1rem;
+    }
+    .cert-dl-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 1rem;
+      background: linear-gradient(135deg, rgba(0,212,255,0.15), rgba(108,99,255,0.15));
+      border: 1px solid rgba(0,212,255,0.35);
+      color: #00d4ff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.02em;
+      transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    }
+    .cert-dl-btn:hover {
+      background: linear-gradient(135deg, rgba(0,212,255,0.28), rgba(108,99,255,0.28));
+      border-color: rgba(0,212,255,0.7);
+      transform: translateY(-2px);
+    }
+    .cert-dl-btn svg {
+      flex-shrink: 0;
+    }
+
+    /* ── INTERN DOWNLOAD inside exp card ── */
+    .exp-dl-wrap {
+      margin-top: 1.2rem;
+    }
+
+    /* ── CCNA new card badge ── */
+    .cert-issuer-badge.cisco {
+      background: linear-gradient(135deg, #00bceb, #0078a4);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">AA<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas id="circuit-canvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-eyebrow"><span class="status-dot"></span> Open to Opportunities — 2026</p>
+      <h1 class="hero-name">Aarthi<br /><span class="gradient-text">Arumugam</span></h1>
+      <p class="hero-role">Electronics &amp; Communication Engineer</p>
+      <p class="hero-tagline">
+        Building the bridge between hardware intelligence and software elegance —<br />
+        from embedded microcontrollers to IoT ecosystems and mobile interfaces.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Let's Connect</a>
+        <a href="Resume.pdf" class="btn-ghost" download>Download Resume ↓</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://linkedin.com/in/aarthi-arumugam" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="mailto:aarruaarru8@gmail.com" aria-label="Email">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+        <a href="tel:+919345771603" aria-label="Phone">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12 19.79 19.79 0 0 1 1.08 3.4 2 2 0 0 1 3.06 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+        </a>
+        <a href="https://github.com/Aarthi-Arumugan" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2.02c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.28-1.7-1.28-1.7-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.17 1.18a10.97 10.97 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.77.11 3.06.73.8 1.18 1.83 1.18 3.08 0 4.41-2.68 5.38-5.24 5.66.41.35.78 1.05.78 2.12v3.14c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <span class="stat-number" data-target="9.0" data-decimal="1">0</span>
+          <span class="stat-label">CGPA</span>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-number" data-target="2" data-decimal="0">0</span>
+          <span class="stat-label">Live Projects</span>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-number" data-target="5" data-decimal="0">0</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-number" data-target="80" data-decimal="0">0</span>
+          <span class="stat-label">NPTEL Score %</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Who I Am</p>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+
+          <!-- ✅ PROFILE PHOTO -->
+          <div class="about-photo-wrap">
+            <img src="image.jpeg" alt="Aarthi Arumugam — ECE Engineer" />
+          </div>
+
+          <p class="about-lead">
+            I'm an Electronics and Communication Engineering student at Sri Manakula Vinayagar Engineering College, Puducherry, maintaining a <strong>9.0 CGPA</strong> while actively building at the intersection of hardware and software.
+          </p>
+          <p>
+            My passion lives where silicon meets software. I've designed embedded systems that detect real-world events, built IoT network analyzers using ESP32 microprocessors, and translated UI concepts into responsive mobile applications using Flutter. Each project has deepened my conviction: the most impactful technology is built by engineers who think fluently in both hardware signals and software abstractions.
+          </p>
+          <p>
+            Beyond coursework, I push my thinking through competitive debate, ISTE chapter participation, and national-level technical paper presentations. I believe engineering excellence requires not just technical depth, but the communication skills to champion your work in any room.
+          </p>
+          <div class="about-tags">
+            <span>Embedded Systems</span>
+            <span>IoT Architecture</span>
+            <span>Mobile Development</span>
+            <span>Network Analysis</span>
+            <span>Microcontrollers</span>
+            <span>DSA</span>
+          </div>
+        </div>
+        <div class="about-card-stack reveal">
+          <div class="info-card glass">
+            <div class="info-card-icon">📍</div>
+            <div>
+              <p class="info-card-label">Location</p>
+              <p class="info-card-value">Puducherry, India</p>
+            </div>
+          </div>
+          <div class="info-card glass">
+            <div class="info-card-icon">🎓</div>
+            <div>
+              <p class="info-card-label">Degree</p>
+              <p class="info-card-value">B.Tech — ECE (2023–2027)</p>
+            </div>
+          </div>
+          <div class="info-card glass">
+            <div class="info-card-icon">💡</div>
+            <div>
+              <p class="info-card-label">Focus Areas</p>
+              <p class="info-card-value">Embedded · IoT · Mobile Apps</p>
+            </div>
+          </div>
+          <div class="info-card glass">
+            <div class="info-card-icon">🌐</div>
+            <div>
+              <p class="info-card-label">Languages</p>
+              <p class="info-card-value">English &amp; Tamil</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREER VISION -->
+  <section id="vision">
+    <div class="container">
+      <div class="vision-inner glass reveal">
+        <div class="vision-left">
+          <p class="section-eyebrow">Looking Ahead</p>
+          <h2 class="section-title">Career Vision</h2>
+          <p>
+            I aim to become a systems engineer who designs embedded platforms that make the physical world smarter, safer, and more connected. My immediate goal is to contribute to a forward-thinking team where I can deepen my expertise in real-time operating systems, firmware development, and IoT cloud integration — while continuously expanding into machine learning at the edge.
+          </p>
+          <p>
+            Long-term, I envision building products that bridge intelligent hardware with scalable software — from smart infrastructure systems to wearable medical devices — creating technology that genuinely improves lives.
+          </p>
+        </div>
+        <div class="vision-pillars">
+          <div class="pillar">
+            <span class="pillar-icon">⚡</span>
+            <h4>Short Term</h4>
+            <p>Secure an embedded systems or IoT role where I can contribute to real products while mastering RTOS, firmware, and sensor integration at scale.</p>
+          </div>
+          <div class="pillar">
+            <span class="pillar-icon">🔗</span>
+            <h4>Mid Term</h4>
+            <p>Lead hardware-software co-design projects, specializing in wireless protocols, edge computing, and cloud-connected device architectures.</p>
+          </div>
+          <div class="pillar">
+            <span class="pillar-icon">🚀</span>
+            <h4>Long Term</h4>
+            <p>Build or contribute to products that sit at the frontier of intelligent embedded systems — from smart cities to precision healthcare technology.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Academic Background</p>
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="timeline-dot active"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card glass">
+            <div class="timeline-meta">
+              <span class="timeline-badge current">Current</span>
+              <span class="timeline-year">2023 — 2027</span>
+            </div>
+            <h3>B.Tech — Electronics &amp; Communication Engineering</h3>
+            <p class="timeline-institution">Sri Manakula Vinayagar Engineering College, Puducherry</p>
+            <div class="timeline-highlight">
+              <span class="cgpa-badge">CGPA: 9.0 / 10.0</span>
+            </div>
+            <p class="timeline-detail">
+              Pursuing a comprehensive curriculum spanning analog &amp; digital electronics, embedded systems design, wireless communication, signal processing, and VLSI. Active participant in technical symposiums and engineering societies, applying classroom theory to hardware projects and competitive challenges.
+            </p>
+            <div class="timeline-skills">
+              <span>Embedded Systems</span>
+              <span>Wireless Comms</span>
+              <span>Signal Processing</span>
+              <span>VLSI</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card glass">
+            <div class="timeline-meta">
+              <span class="timeline-year">2022 — 2023</span>
+            </div>
+            <h3>Higher Secondary Certificate — Science Stream</h3>
+            <p class="timeline-institution">Kannagi Girls Government Higher Secondary School, Puducherry</p>
+            <div class="timeline-highlight">
+              <span class="cgpa-badge">Score: 88.33%</span>
+            </div>
+            <p class="timeline-detail">
+              Completed the Science stream with Physics, Chemistry, Mathematics, and Computer Science, building a rigorous analytical foundation that directly informs my engineering work today.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-card glass">
+            <div class="timeline-meta">
+              <span class="timeline-year">2020 — 2021</span>
+            </div>
+            <h3>Secondary School Leaving Certificate (SSLC)</h3>
+            <p class="timeline-institution">IHM Government Girls High School, Puducherry</p>
+            <div class="timeline-highlight">
+              <span class="cgpa-badge">Score: 80%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Technical Proficiency</p>
+        <h2 class="section-title">Skills &amp; Expertise</h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-category glass reveal">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">💻</span>
+            <h3>Programming Languages</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>Python</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>Java</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>C</span><span class="skill-pct">82%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>Dart (Flutter)</span><span class="skill-pct">70%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category glass reveal">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🔌</span>
+            <h3>Embedded &amp; IoT</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>Arduino / ESP32</span><span class="skill-pct">83%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="83"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>IoT System Design</span><span class="skill-pct">78%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>Sensor Integration</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>Hardware Prototyping</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category glass reveal">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🌐</span>
+            <h3>Networking &amp; Tools</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>Cisco Packet Tracer</span><span class="skill-pct">78%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>Network Analysis</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>Arduino IDE</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>Flutter / Dart SDK</span><span class="skill-pct">70%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category glass reveal">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🧩</span>
+            <h3>CS Fundamentals</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>Data Structures &amp; Algorithms</span><span class="skill-pct">82%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>Object-Oriented Programming</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>Problem Solving</span><span class="skill-pct">88%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top"><span>Mobile App Architecture</span><span class="skill-pct">72%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="72"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Soft Skills chips -->
+      <div class="soft-skills-row reveal">
+        <h3 class="soft-skills-title">Soft Skills</h3>
+        <div class="soft-chips">
+          <span class="soft-chip">Analytical Thinking</span>
+          <span class="soft-chip">Problem Solving</span>
+          <span class="soft-chip">Team Collaboration</span>
+          <span class="soft-chip">Quick Learner</span>
+          <span class="soft-chip">Public Speaking</span>
+          <span class="soft-chip">Critical Thinking</span>
+          <span class="soft-chip">Agile Workflow</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Industry Exposure</p>
+        <h2 class="section-title">Experience</h2>
+      </div>
+      <div class="exp-card glass reveal">
+        <div class="exp-left">
+          <div class="exp-company-badge">
+            <span class="exp-initial">R</span>
+          </div>
+          <div class="exp-connector"></div>
+        </div>
+        <div class="exp-right">
+          <div class="exp-header">
+            <div>
+              <h3>Flutter Developer Intern</h3>
+              <p class="exp-company">Relietech · Puducherry, India</p>
+            </div>
+            <span class="exp-date">June 2025</span>
+          </div>
+          <p class="exp-summary">
+            Joined Relietech's engineering team to gain hands-on exposure to production-grade mobile development. Worked within an agile development cycle to design and implement functional UI components using Flutter, collaborating with the team to translate product wireframes into polished, responsive mobile screens.
+          </p>
+          <div class="exp-highlights">
+            <div class="exp-highlight-item">
+              <span class="highlight-bullet"></span>
+              <p>Built and iterated on real-world UI components using Flutter's widget system, reinforcing modular design principles for scalable mobile applications.</p>
+            </div>
+            <div class="exp-highlight-item">
+              <span class="highlight-bullet"></span>
+              <p>Translated conceptual software layouts into functional, responsive mobile screens — bridging product design and engineering implementation.</p>
+            </div>
+            <div class="exp-highlight-item">
+              <span class="highlight-bullet"></span>
+              <p>Developed a clear understanding of mobile application architecture, development lifecycle, and team-based software delivery in an industry setting.</p>
+            </div>
+            <div class="exp-highlight-item">
+              <span class="highlight-bullet"></span>
+              <p>Strengthened agile collaboration skills by actively participating in development sprints, code reviews, and cross-functional team discussions.</p>
+            </div>
+          </div>
+          <div class="exp-tech-tags">
+            <span>Flutter</span>
+            <span>Dart</span>
+            <span>Mobile UI Design</span>
+            <span>Agile / Sprint</span>
+            <span>App Architecture</span>
+          </div>
+          <!-- ✅ INTERNSHIP CERTIFICATE DOWNLOAD -->
+          <div class="exp-dl-wrap">
+            <a href="intern-certificate.pdf" download class="cert-dl-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Internship Certificate
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">What I've Built</p>
+        <h2 class="section-title">Projects</h2>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card glass reveal">
+          <div class="project-header">
+            <div class="project-icon">🚗</div>
+            <div class="project-meta">
+              <span class="project-tag">Embedded Systems</span>
+              <span class="project-tag">IoT</span>
+            </div>
+          </div>
+          <h3 class="project-title">Real-Time Speed Breaker Detection &amp; Alert System</h3>
+          <p class="project-tagline">Enhancing road safety through intelligent embedded sensing</p>
+
+          <div class="project-section">
+            <h4><span class="ps-icon">🎯</span> Problem Statement</h4>
+            <p>Speed breakers on Indian roads are frequently unmarked or poorly lit, contributing to vehicle damage and road accidents — especially at night. Drivers have no reliable real-time warning system to anticipate upcoming road irregularities.</p>
+          </div>
+          <div class="project-section">
+            <h4><span class="ps-icon">⚙️</span> Solution</h4>
+            <p>Designed and developed an embedded system using sensors and microcontroller logic to detect speed breakers in real time and trigger automated alerts for drivers — improving navigation awareness and reducing accident risks.</p>
+          </div>
+          <div class="project-section">
+            <h4><span class="ps-icon">✨</span> Key Features</h4>
+            <ul class="project-features">
+              <li>Real-time detection of road irregularities using sensor arrays</li>
+              <li>Automated audio/visual alert mechanism triggered upon detection</li>
+              <li>Reliable data processing with minimal false-positive rate</li>
+              <li>Hardware-software co-design ensuring efficient system performance</li>
+            </ul>
+          </div>
+          <div class="project-tech">
+            <span>Arduino IDE</span>
+            <span>Embedded C</span>
+            <span>Ultrasonic / IR Sensors</span>
+            <span>Microcontroller</span>
+            <span>Alert Circuitry</span>
+          </div>
+          <div class="project-impact">
+            <span class="impact-label">Impact:</span>
+            Demonstrates how low-cost embedded solutions can address real-world road safety challenges — applicable to smart vehicle systems and smart city infrastructure.
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass reveal">
+          <div class="project-header">
+            <div class="project-icon">📡</div>
+            <div class="project-meta">
+              <span class="project-tag">IoT</span>
+              <span class="project-tag">Networking</span>
+            </div>
+          </div>
+          <h3 class="project-title">Wireless Network Connectivity Analyzer</h3>
+          <p class="project-tagline">ESP32-powered diagnostics for wireless communication health</p>
+
+          <div class="project-section">
+            <h4><span class="ps-icon">🎯</span> Problem Statement</h4>
+            <p>Wireless connectivity inconsistencies in IoT deployments are difficult to diagnose without dedicated monitoring infrastructure. Engineers need real-time visibility into signal quality, latency, and connectivity baselines to optimize wireless systems.</p>
+          </div>
+          <div class="project-section">
+            <h4><span class="ps-icon">⚙️</span> Solution</h4>
+            <p>Built a network health monitoring system using an ESP32 microprocessor paired with an advanced SIM communication module to capture, parse, and analyze wireless connectivity metrics — enabling informed decisions about network optimization.</p>
+          </div>
+          <div class="project-section">
+            <h4><span class="ps-icon">✨</span> Key Features</h4>
+            <ul class="project-features">
+              <li>Live capture and parsing of wireless connectivity metrics</li>
+              <li>Identification of optimal communication baselines across signal conditions</li>
+              <li>Modular code architecture allowing extensibility for additional protocols</li>
+              <li>ESP32 + SIM module integration for multi-channel connectivity testing</li>
+            </ul>
+          </div>
+          <div class="project-tech">
+            <span>ESP32</span>
+            <span>SIM Module</span>
+            <span>C / Arduino IDE</span>
+            <span>Wireless Protocols</span>
+            <span>Network Diagnostics</span>
+          </div>
+          <div class="project-impact">
+            <span class="impact-label">Impact:</span>
+            Provides a reusable diagnostic framework for IoT device deployments, directly applicable to smart home, industrial automation, and infrastructure monitoring use cases.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Validated Learning</p>
+        <h2 class="section-title">Certifications &amp; Achievements</h2>
+      </div>
+      <div class="cert-grid">
+
+        <!-- ✅ ZUVY / Amazon Future Engineer — 2 certificates -->
+        <div class="cert-card glass reveal">
+          <div class="cert-issuer-badge amazon">
+            <span>AWS</span>
+          </div>
+          <div class="cert-body">
+            <h3>Amazon Future Engineer Bootcamp</h3>
+            <p class="cert-issuer">Amazon Future Engineer · Zuvy · Navgurukul</p>
+            <p class="cert-desc">Completed two intensive AFE Bootcamp tracks — a 2-month Basics of Python &amp; AI course (March 2025) and a 10-month Basics of Java &amp; DSA course (February 2026) — building a strong computational thinking foundation aligned with industry-standard software engineering practices.</p>
+            <div class="cert-tracks">
+              <span>Python &amp; AI</span>
+              <span>Java Fundamentals</span>
+              <span>DSA</span>
+              <span>2 Certificates</span>
+            </div>
+            <!-- ✅ TWO DOWNLOAD BUTTONS -->
+            <div class="cert-downloads">
+              <a href="zuvy-python-certificate.pdf" download class="cert-dl-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Python &amp; AI Certificate
+              </a>
+              <a href="zuvy-java-dsa-certificate.pdf" download class="cert-dl-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Java &amp; DSA Certificate
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✅ NPTEL -->
+        <div class="cert-card glass reveal">
+          <div class="cert-issuer-badge nptel">
+            <span>NPTEL</span>
+          </div>
+          <div class="cert-body">
+            <h3>Introduction to IoT</h3>
+            <p class="cert-issuer">NPTEL — IIT Kharagpur · Jan–Apr 2025</p>
+            <p class="cert-desc">Achieved the Elite certification category with an outstanding 80% consolidated score (Assignments: 24.56/25 · Proctored Exam: 55.5/75) in this nationally recognized IIT Kharagpur-backed program — covering IoT architecture, communication protocols, sensor systems, and cloud integration fundamentals.</p>
+            <div class="cert-tracks">
+              <span>Elite Category</span>
+              <span>80% Score</span>
+              <span>IoT Architecture</span>
+              <span>12-Week Course</span>
+            </div>
+            <!-- ✅ DOWNLOAD BUTTON -->
+            <div class="cert-downloads">
+              <a href="nptel-certificate.pdf" download class="cert-dl-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download NPTEL Certificate
+              </a>
+            </div>
+          </div>
+          <div class="cert-score-badge">Elite</div>
+        </div>
+
+        <!-- ✅ CCNA — NEW CARD -->
+        <div class="cert-card glass reveal">
+          <div class="cert-issuer-badge cisco">
+            <span>CISCO</span>
+          </div>
+          <div class="cert-body">
+            <h3>CCNA: Switching, Routing &amp; Wireless Essentials</h3>
+            <p class="cert-issuer">Cisco Networking Academy · Sri Manakula Vinayagar Engineering College · Jan 2026</p>
+            <p class="cert-desc">Successfully completed the CCNA Switching, Routing, and Wireless Essentials course offered through the Cisco Networking Academy program — covering switching concepts, inter-VLAN routing, STP, EtherChannel, DHCPv4/v6, HSRP, and wireless LAN configuration.</p>
+            <div class="cert-tracks">
+              <span>Switching &amp; Routing</span>
+              <span>Wireless Essentials</span>
+              <span>Cisco Networking Academy</span>
+              <span>Jan 2026</span>
+            </div>
+            <!-- ✅ DOWNLOAD BUTTON -->
+            <div class="cert-downloads">
+              <a href="ccna-certificate.pdf" download class="cert-dl-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download CCNA Certificate
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✅ DIGITRIX -->
+        <div class="cert-card glass reveal achievement-card">
+          <div class="cert-issuer-badge paper">
+            <span>🏆</span>
+          </div>
+          <div class="cert-body">
+            <h3>National Technical Paper Presentation</h3>
+            <p class="cert-issuer">DIGITRIX 2K24 — Achariya Arts &amp; Science College, Puducherry · 29 Apr 2024</p>
+            <p class="cert-desc">Authored and delivered a research paper on AI and data-driven decision-making at a national-level symposium organized by the Department of Computer Science — demonstrating the ability to research, synthesize, and communicate complex technical concepts to a multidisciplinary audience.</p>
+            <div class="cert-tracks">
+              <span>AI &amp; Data Science</span>
+              <span>National Level</span>
+              <span>Technical Research</span>
+              <span>Paper Presentation</span>
+            </div>
+            <!-- ✅ DOWNLOAD BUTTON -->
+            <div class="cert-downloads">
+              <a href="digitrix-ppt.pdf" download class="cert-dl-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download Participation Certificate
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP -->
+  <section id="leadership">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Beyond the Classroom</p>
+        <h2 class="section-title">Leadership &amp; Activities</h2>
+      </div>
+      <div class="leadership-grid">
+        <div class="lead-card glass reveal">
+          <div class="lead-icon">🎤</div>
+          <h3>Demosthenes Debate Club</h3>
+          <p class="lead-role">Active Member</p>
+          <p>Engaged in structured debates and rhetorical discussions across technical and socio-political topics. Developed the ability to rapidly formulate and defend arguments under pressure — a skill that directly translates to technical presentations, stakeholder communication, and design reviews in engineering environments.</p>
+          <div class="lead-skills">
+            <span>Public Speaking</span>
+            <span>Critical Thinking</span>
+            <span>Spontaneous Articulation</span>
+            <span>Structured Argumentation</span>
+          </div>
+        </div>
+        <div class="lead-card glass reveal">
+          <div class="lead-icon">⚙️</div>
+          <h3>ISTE — Indian Society for Technical Education</h3>
+          <p class="lead-role">Active Member</p>
+          <p>Contributed to a vibrant chapter that bridges academic engineering with industry trends. Collaborated with peers on technical workshops, ideation sessions, and knowledge-sharing events — fostering a culture of continuous learning and engineering innovation that extends well beyond formal coursework.</p>
+          <div class="lead-skills">
+            <span>Technical Innovation</span>
+            <span>Team Collaboration</span>
+            <span>Engineering Community</span>
+            <span>Continuous Learning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRENGTHS -->
+  <section id="strengths">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Core Competencies</p>
+        <h2 class="section-title">What Sets Me Apart</h2>
+      </div>
+      <div class="strengths-grid">
+        <div class="strength-card glass reveal">
+          <div class="strength-icon">🧠</div>
+          <h3>Analytical Thinking</h3>
+          <p>I approach problems methodically — decomposing complex systems into discrete, testable components. Whether debugging an embedded circuit or designing a data model, I rely on structured thinking before reaching for a solution.</p>
+        </div>
+        <div class="strength-card glass reveal">
+          <div class="strength-icon">🔧</div>
+          <h3>Problem Solving</h3>
+          <p>From hardware fault isolation to software architecture decisions, I have a track record of turning abstract challenges into working prototypes. I've built systems that operate reliably in real-world, uncertain environments.</p>
+        </div>
+        <div class="strength-card glass reveal">
+          <div class="strength-icon">🤝</div>
+          <h3>Team Collaboration</h3>
+          <p>Effective engineering is a team sport. I've collaborated across internship teams, ISTE chapters, and debate clubs — consistently contributing ideas while listening, adapting, and amplifying the work of those around me.</p>
+        </div>
+        <div class="strength-card glass reveal">
+          <div class="strength-icon">⚡</div>
+          <h3>Quick Learner</h3>
+          <p>I picked up Flutter and Dart during my internship, NPTEL IoT certification independently, and national-level paper presentation skills through self-driven research — all while maintaining a 9.0 CGPA. I thrive in environments that demand fast, deep learning.</p>
+        </div>
+        <div class="strength-card glass reveal">
+          <div class="strength-icon">🔗</div>
+          <h3>Hardware–Software Integration</h3>
+          <p>My unusual combination of embedded systems knowledge and mobile development experience lets me think across the full stack — from microcontroller registers to responsive UI components — making me a versatile engineer on any product team.</p>
+        </div>
+        <div class="strength-card glass reveal">
+          <div class="strength-icon">📢</div>
+          <h3>Technical Communication</h3>
+          <p>I have presented at a national-level symposium, participated in competitive debate, and documented engineering projects clearly. I can explain a complex embedded system to a non-technical stakeholder as fluently as to a fellow engineer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY HIRE ME -->
+  <section id="why-hire">
+    <div class="container">
+      <div class="why-inner glass reveal">
+        <div class="why-header">
+          <p class="section-eyebrow">For Recruiters</p>
+          <h2 class="section-title">Why Hire Aarthi?</h2>
+          <p class="why-intro">A concise case for why I'm the right addition to your engineering team.</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-point">
+            <span class="why-num">01</span>
+            <div>
+              <h4>Rare Dual Fluency</h4>
+              <p>Most engineers are deeply hardware or deeply software. I'm fluent in both — from ESP32 sensor systems to Flutter mobile UIs — giving your team a versatile engineer who reduces hand-off friction between hardware and software.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <span class="why-num">02</span>
+            <div>
+              <h4>Proven Academic Excellence</h4>
+              <p>A 9.0 CGPA and an 80% NPTEL Elite score demonstrate consistent, rigorous learning. I don't just study for grades — I study to build things that work.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <span class="why-num">03</span>
+            <div>
+              <h4>Real-World Project Experience</h4>
+              <p>My projects aren't coursework simulations. The Speed Breaker Detection System and Wireless Analyzer are hardware-software systems I built, debugged, and iterated on — with measurable outcomes and real engineering constraints.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <span class="why-num">04</span>
+            <div>
+              <h4>Industry-Ready Communication</h4>
+              <p>Between a national-level paper presentation and competitive debate experience, I can present ideas, justify engineering decisions, and collaborate across functions — skills many technical candidates lack.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <span class="why-num">05</span>
+            <div>
+              <h4>Growth Trajectory</h4>
+              <p>I'm in my second year of a four-year degree, and I've already shipped a Flutter internship, two hardware projects, and five certifications. This trajectory only accelerates with the right opportunity and mentorship.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <span class="why-num">06</span>
+            <div>
+              <h4>Driven by Curiosity, Not Just Deadlines</h4>
+              <p>I present at symposiums I wasn't required to attend, earn NPTEL and CCNA certifications outside my syllabus, and join debate clubs to sharpen thinking I'll use in design reviews. I invest in myself beyond the minimum — because great engineers always do.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Get In Touch</p>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="contact-intro">I'm actively seeking internships, co-op opportunities, and entry-level roles in Embedded Systems, IoT, and Software Engineering. If you're building something interesting, I'd love to hear about it.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card glass reveal">
+          <div class="contact-icon">✉️</div>
+          <h4>Email</h4>
+          <a href="mailto:aarruaarru8@gmail.com">aarruaarru8@gmail.com</a>
+        </div>
+        <div class="contact-card glass reveal">
+          <div class="contact-icon">📞</div>
+          <h4>Phone</h4>
+          <a href="tel:+919345771603">+91 93457 71603</a>
+        </div>
+        <div class="contact-card glass reveal">
+          <div class="contact-icon">💼</div>
+          <h4>LinkedIn</h4>
+          <a href="https://linkedin.com/in/aarthi-arumugam" target="_blank" rel="noopener">linkedin.com/in/aarthi-arumugam</a>
+        </div>
+        <div class="contact-card glass reveal">
+          <div class="contact-icon">📍</div>
+          <h4>Location</h4>
+          <span>Puducherry, India</span>
+        </div>
+      </div>
+      <div class="contact-cta reveal">
+        <a href="mailto:aarruaarru8@gmail.com" class="btn-primary btn-large">Send Me a Message →</a>
+        <a href="Resume.pdf" class="btn-ghost" download>Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-name">Aarthi Arumugam</p>
+        <p class="footer-sub">Electronics &amp; Communication Engineer · Puducherry, India</p>
+        <p class="footer-copy">© 2025 Aarthi Arumugam. Designed with intention.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
